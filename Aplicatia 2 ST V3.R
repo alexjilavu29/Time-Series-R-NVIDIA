@@ -166,3 +166,7 @@ ndiffs(crestere_pib_diff)
 ndiffs(biblioteci_diff)
 
 
+# Cointegrare
+
+# Selectarea lagului 
+
