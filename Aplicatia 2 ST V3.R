@@ -96,11 +96,10 @@ biblioteci_ts <- (biblioteci_ts - mean(biblioteci_ts)) / sd(biblioteci_ts)
 # Calculul primei diferențe
 absolventi_diff <- diff(absolventi_ts)
 unitati_diff <- diff(unitati_ts)
-crestere_pib_diff <- diff(crestere_pib_ts)
 biblioteci_diff <- diff(biblioteci_ts)
 
 
-
+crestere_pib_diff <- diff(crestere_pib_ts)
 
 
 # Graficul seriilor
