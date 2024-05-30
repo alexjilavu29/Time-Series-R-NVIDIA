@@ -33,7 +33,6 @@ library(tsDyn)
 library(dynlm)
 library(aTSA)
 library(readr)
-setwd("D:/Desktop/CSIE/An 3/Sem 2 2023 - 2024/Serii de timp")
 
 # Citirea valorilor din fisierul absolventi.csv si crearea unui dataframe
 absolventi <- read.csv("absolventi.csv", header = TRUE, sep = ",")
@@ -80,6 +79,7 @@ ggplot(data = absolventi_unitati) +
  ggtitle('Norul de puncte dintre nr de unitati de invatamant si % de crestere a PIB-ului')+
  theme_bw()
 
+
 # Declaram variabilele de tip ts
 absolventi_ts <- ts(absolventi_unitati$Absolventi, start = 1991, frequency = 1)
 unitati_ts <- ts(absolventi_unitati$Unitati, start = 1991, frequency = 1)
@@ -117,6 +117,11 @@ autoplot(cbind(absolventi_ts,unitati_ts,biblioteci_ts)) +
 autoplot(cbind(absolventi_diff,unitati_diff,biblioteci_diff)) +
   ylab('') +
   ggtitle('Graficul seriilor diferentiate') +
+  theme_bw()
+
+autoplot(cbind(absolventi_unitati$Unitati,absolventi_unitati$Biblioteci)) +
+  ylab('') +
+  ggtitle('Evoluția Infrastructurii Naționale pe domeniul academic în ultimii 30 de ani') +
   theme_bw()
 
 
@@ -322,6 +327,10 @@ plot(Absolventi_irf, ylab = 'Absolventi', main = 'Unitati shock to Absolventi')
 Absolventi_irf <- irf(Model1VAR, impulse = 'Biblioteci', response = 'Absolventi', n.ahead= 10, boot = TRUE)
 plot(Absolventi_irf, ylab = 'Absolventi', main = 'Bibioteci shock to Absolventi')
 
+Unitati_irf <- irf(Model1VAR, impulse = 'Absolventi', response = 'Unitati', n.ahead= 10, boot = TRUE)
+plot(Unitati_irf, ylab = 'Unitati', main = 'Absolventi shock to Unitati')
+Unitati_irf <- irf(Model1VAR, impulse = 'Biblioteci', response = 'Unitati', n.ahead= 10, boot = TRUE)
+plot(Unitati_irf, ylab = 'Unitati', main = 'Bibioteci shock to Unitati')
 
 # Descompunerea variantei
 FEVD1 <- fevd(Model1VAR,n.ahead=10)
@@ -338,3 +347,4 @@ plot(forecast, name = 'Biblioteci')
 fanchart(forecast, name = 'Absolventi')
 fanchart(forecast, name = 'Unitati')
 fanchart(forecast, name = 'Biblioteci')
+
