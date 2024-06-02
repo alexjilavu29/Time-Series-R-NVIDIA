@@ -33,7 +33,7 @@ library(tsDyn)
 library(dynlm)
 library(aTSA)
 library(readr)
-setwd("D:/Desktop/CSIE/An 3/Sem 2 2023 - 2024/Serii de timp")
+
 
 # Citirea valorilor din fisierul absolventi.csv si crearea unui dataframe
 absolventi <- read.csv("absolventi.csv", header = TRUE, sep = ",")
