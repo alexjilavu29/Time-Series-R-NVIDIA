@@ -65,3 +65,78 @@ git clone https://github.com/alexjilavu29/Time-Series-R-NVIDIA.git
 	•	Alexandru Jilavu
 	•	Corina Lișiță
 	•	Raluca-Andra Medeleanu
+
+
+### Romanian Translation Below
+----
+
+
+
+# Proiect de Analiză a Seriilor de Timp
+
+## Motivație
+
+Acest proiect își propune să realizeze o analiză cuprinzătoare a seriilor de timp pe două subiecte distincte:
+1. Evoluția acțiunilor NVIDIA Corporation (NVDA) pe bursă.
+2. Analiza sistemului educațional românesc de-a lungul decadelor.
+
+## Structura Proiectului
+
+Proiectul este structurat în mai multe secțiuni cheie:
+
+1. **Introducere**
+2. **Revista Literaturii de Specialitate**
+3. **Analiza Seriilor de Timp**
+4. **Concluzie**
+
+## Conținutul Repozitoriului
+
+Acest repozitoriu conține codul R și documentația pentru analiza completă a evoluției acțiunilor NVIDIA și a sistemului educațional românesc.
+
+### Introducere
+
+Secțiunea introductivă descrie obiectivele proiectului:
+- Pentru NVIDIA: Analiza datelor lunare ale acțiunilor NVDA din ianuarie 2017 până în aprilie 2024.
+- Pentru educația din România: Analiza datelor despre absolvenți, instituții de învățământ și biblioteci din 1991 până în 2021.
+
+### Revista Literaturii de Specialitate
+
+Revista literaturii include discuții despre studii și metodologii relevante utilizate în domeniile analizei și prognozei seriilor de timp, inclusiv:
+- Prognoza acțiunilor folosind metode precum ARIMA, LSTM și HMM.
+- Analiza sistemelor educaționale și corelația lor cu factorii economici.
+
+### Analiza Seriilor de Timp
+
+Analiza seriilor de timp este esența proiectului, implicând pași detaliați precum:
+
+#### Analiza Acțiunilor NVIDIA
+- **Pregătirea Datelor:** Citirea și curățarea datelor lunare ale acțiunilor.
+- **Testarea Staționarității:** Verificarea staționarității folosind teste statistice.
+- **Modelarea ARIMA:** Identificarea și ajustarea modelelor ARIMA.
+- **Analiza Sezonală:** Aplicarea metodelor Holt-Winters și ETS.
+
+#### Analiza Sistemului Educațional Românesc
+- **Pregătirea Datelor:** Structurarea și curățarea datelor despre absolvenți, instituții de învățământ și biblioteci.
+- **Testarea Staționarității:** Verificarea staționarității folosind teste statistice.
+- **Analiza Cointegrării:** Testarea relației pe termen lung între infrastructura educațională și numărul de absolvenți.
+- **Prognoza:** Utilizarea diverselor modele pentru a prezice tendințele viitoare.
+
+### Concluzie
+
+Concluziile rezumă rezultatele analizelor pentru ambele subiecte:
+- Pentru NVIDIA, metoda Holt-Winters Multiplicativă a furnizat cea mai precisă prognoză pentru tendința acțiunilor NVDA.
+- Pentru sistemul educațional românesc, analiza a arătat dependențe semnificative între numărul de instituții de învățământ și absolvenți, identificând tendințe pe termen lung și posibile arii de îngrijorare.
+
+## Utilizare
+
+Clonați repozitoriul și rulați scripturile R pentru a replica analizele. Asigurați-vă că aveți instalate bibliotecile necesare, inclusiv `tidyverse`, `forecast` și `tseries`.
+
+```bash
+git clone https://github.com/alexjilavu29/Time-Series-R-NVIDIA.git
+```
+
+## Contributori
+
+	•	Alexandru Jilavu
+	•	Corina Lișiță
+	•	Raluca-Andra Medeleanu
